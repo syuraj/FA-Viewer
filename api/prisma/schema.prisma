@@ -1,0 +1,23 @@
+datasource DS {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = env("BINARY_TARGET")
+}
+
+// Run `rw db save` to create models in db
+
+model stock_data {
+  id                    Int      @id @default(autoincrement())
+  stock                 String
+  company               String?
+  datetime              DateTime
+  news_count            Int?
+  tweets_count          Int?
+  positive_tweets_count Int?
+  negative_tweets_count Int?
+  // @@unique([stock, datetime])
+}
