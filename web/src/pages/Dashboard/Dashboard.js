@@ -2,7 +2,8 @@ import React from 'react'
 
 import { DefaultLayout } from '../../layouts'
 
-import StockOverview from './StockOverview'
+import StockOverview from './Report'
+import Tables from './components/Tables'
 
 export default (props) => (
   <main>
