@@ -1,11 +1,9 @@
 # ForteAegis - Viewer
+
 Ui interface for viewing FA data
-<br />
-https://ForteAegis.netlify.app
 <br />
 
 ### Built using [Redwoodjs.com](https://redwoodjs.com)
-
 
 ### Setup & Start
 
@@ -13,7 +11,6 @@ https://ForteAegis.netlify.app
 - `rw dev` to start the dev mode
 
 Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/api/functions/*`.
-
 
 ### Database
 
