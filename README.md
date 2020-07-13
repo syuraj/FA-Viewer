@@ -25,3 +25,7 @@ rw db up
 This will create postgres tables from schema at `api/prisma/schema.
 
 If you've made changes to the schema run `rw db save` to generate a migration, and `rw db up` to apply the migration/ generate a new ORM client.
+
+## Preview
+
+<img src='./web/public/demo-screen.png'>
