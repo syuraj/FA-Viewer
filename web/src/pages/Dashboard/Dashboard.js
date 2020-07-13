@@ -2,15 +2,14 @@ import React from 'react'
 
 import { DefaultLayout } from '../../layouts'
 
-import StockOverview from './Report'
-import Tables from './components/Tables'
+import Report from './Report'
 
 export default (props) => (
   <main>
     <section>
       <div>
         <DefaultLayout {...props} noNavbar={true} noFooter={true}>
-          <StockOverview {...props} />
+          <Report {...props} />
         </DefaultLayout>
       </div>
     </section>
