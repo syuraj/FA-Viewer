@@ -7,17 +7,25 @@ provider:
   region: us-east-1
 
 package:
+  exclude:
+    - ./**
   include:
     - web/dist/**
-    - api/dist/**
+    - backend/**
 
 functions:
   graphql:
-    handler: handler.graphql
+    handler: backend/graphql.graphqlHandler
+    access: public
     events:
-      - httpApi:
-          method: POST
-          path: /graphql/{param}
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+          cors: true
 
 resources:
   Resources:
@@ -42,6 +50,9 @@ resources:
                 - s3:GetObject
               Resource:
                 Fn::Join: ['', ['arn:aws:s3:::', { 'Ref': 'StaticSite' }, '/*']]
+
+plugins:
+  - serverless-s3-sync
 
 custom:
   siteName: fa-viewer-web-bucket.com

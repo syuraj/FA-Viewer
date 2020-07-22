@@ -17,6 +17,7 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn rw build
+          cd ./backend && yarn install --frozen-lockfile && cd ..
         env:
           CI: true
       - name: serverless deploy
