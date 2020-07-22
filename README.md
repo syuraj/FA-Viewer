@@ -12,6 +12,12 @@ Ui interface for viewing FA data
 
 Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/api/functions/*`.
 
+### Configure AWS deployment
+
+- Create a user in AWS IAM with AWS deploy policy
+- Copy `Access key ID` and `Secret access key` for that user
+- Create Secrets in github repo settings with name `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` with values from above
+
 ### Database
 
 We're using [Prisma2](https://github.com/prisma/prisma2), a modern DB toolkit to query, migrate and model your database.
