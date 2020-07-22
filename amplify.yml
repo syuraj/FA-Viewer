@@ -7,9 +7,10 @@ frontend:
     build:
       commands: yarn run rw build
   artifacts:
-    baseDirectory: /web/dist/
+    baseDirectory: /
     files:
-      - '**/*'
+      - 'web/dist/*'
+      - 'api/dist/*'
   cache:
     paths:
       - node_modules/**/*
