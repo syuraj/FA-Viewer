@@ -21,4 +21,6 @@ jobs:
         env:
           CI: true
       - name: AWS Deployment
-        run: yarn run sls deploy --conceal --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          yarn run sls credentials --provider aws --conceal --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          yarn run sls deploy
