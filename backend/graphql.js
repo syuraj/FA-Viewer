@@ -11,17 +11,16 @@ const typeDefs = gql`
   }
 
   type Query {
-    hello: String
-    athenaQuery: Prediction
+    athenaQuery: [Prediction]
   }
 `
 
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!',
     athenaQuery: async () => {
-      return runAthenaQuery()
+      const predictions = await runAthenaQuery()
+      return predictions.Items
     },
   },
 }
