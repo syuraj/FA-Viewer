@@ -8,7 +8,8 @@
   },
   "devDependencies": {
     "@redwoodjs/core": "^0.13.0",
-    "netlify-plugin-prisma-provider": "^0.3.0"
+    "netlify-plugin-prisma-provider": "^0.3.0",
+    "serverless-offline": "^6.5.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config"

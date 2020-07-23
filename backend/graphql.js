@@ -1,11 +1,18 @@
 const { ApolloServer, gql } = require('apollo-server-lambda')
 
-const runAthenaQuery = require('./athena-query')
+const { runAthenaQuery } = require('./athena-query')
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
+  type Prediction {
+    product: String
+    hold: String
+    strategy: String
+  }
+
   type Query {
     hello: String
+    athenaQuery: Prediction
   }
 `
 
