@@ -1,16 +1,22 @@
 {
-  "name": "backend",
+  "name": "fa-viewer-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --runInBand --testMatch \"**/?(*.)+(spec|test).[tj]s?(x)\" --detectOpenHandles --forceExit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "apollo-server-lambda": "^2.16.0",
+    "athena-express": "^6.0.3",
+    "aws-sdk": "^2.718.0",
+    "dotenv": "^8.2.0",
     "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
   }
 }
